@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class EducationResourcesScreen extends StatelessWidget {
   EducationResourcesScreen({Key? key}) : super(key: key);
@@ -44,11 +43,11 @@ class EducationResourcesScreen extends StatelessWidget {
   void _openResource(String url) async {
     final Uri uri = Uri.parse(url); // Parse the URL
     // Check if the URL can be launched and launch it
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
-    } else {
-      throw 'Could not launch $url'; // Error handling if the URL cannot be launched
-    }
+    // if (await canLaunchUrl(uri)) {
+    //   await launchUrl(uri);
+    // } else {
+    //   throw 'Could not launch $url'; // Error handling if the URL cannot be launched
+    // }
   }
 
   @override
